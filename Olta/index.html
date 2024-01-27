@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Giriş Sayfası</title>
+</head>
+<body>
+    <div style="border-radius: 50%; border: 1px solid black; width: 200px; height: 200px; text-align: center; padding: 40px;">
+        <form id="loginForm">
+            Kullanıcı Adı: <input type="text" name="username"><br>
+            Şifre: <input type="password" name="password"><br>
+            <input type="submit" value="Gönder">
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').onsubmit = function(e) {
+    e.preventDefault(); // Formun varsayılan gönderimini engelle
+
+    var username = e.target.username.value;
+    var password = e.target.password.value;
+
+    console.log("Kullanıcı Adı: " + username + ", Şifre: " + password);
+};
+
+    </script>
+</body>
+</html>
